@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package learn_grpc.parse;
+
+option go_package = "services/parse";
+
+service ParseService {
+    rpc Parse(EmptyRequest) returns (Status);
+}
+
+message EmptyRequest {}
+
+message Status { 
+    string Info = 1;
+}
